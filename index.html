@@ -9,12 +9,12 @@
   <body>
     <main class="page">
       <section class="hero">
-        <div class="hero__content">
+        <div class="hero__body">
           <div class="hero__text">
             <p class="eyebrow">Приведите тело в форму</p>
             <h1>с чемпионкой Катей Усмановой</h1>
             <p class="hero__subtitle">
-              без диет, голода и запретов, с пользой для здоровья
+              без диет, голода и запретов с пользой для здоровья
             </p>
             <p class="hero__description">
               Похудеть, подтянуть попу и живот, набрать форму в зале,
@@ -24,99 +24,146 @@
               <button class="button button--primary" id="chooseProgram">
                 Выбрать программу
               </button>
-              <span class="hint"
-                >Для корректной работы сайта отключите VPN</span
-              >
+              <p class="hint">Для корректной работы сайта отключите VPN</p>
             </div>
           </div>
-          <div class="hero__image" aria-hidden="true">
-            <div class="hero__photo"></div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__card">
+              <img src="assets/hero.png" alt="Катя Усманова тренировка" />
+              <div class="hero__gradient"></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="about">
-        <div class="container about__inner">
-          <div class="about__title-block">
-            <p class="eyebrow">Доверьте свое тело чемпионке</p>
-            <h2>фитнес-бикини и тренеру Кате Усмановой</h2>
-            <p>
-              С 2015 года создаёт топовые тренировки для идеальных ягодиц,
-              плоского живота и стройности без жёстких диет.
-            </p>
+      <section class="programs" id="programs">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Тренировки дома</p>
+            <h2>Комплекты программ для каждой цели</h2>
           </div>
-          <ul class="about__cards">
-            <li class="card">
-              <div class="card__icon">🥇</div>
-              <p class="card__title">Вице-чемпионка мира</p>
-              <p class="card__text">и чемпионка России по фитнес-бикини.</p>
-            </li>
-            <li class="card">
-              <div class="card__icon">🏋️‍♀️</div>
-              <p class="card__title">Профессиональный фитнес-тренер</p>
-              <p class="card__text">с опытом более 15 лет.</p>
-            </li>
-            <li class="card">
-              <div class="card__icon">👩‍👧‍👦</div>
-              <p class="card__title">Мама 2-х детей</p>
-              <p class="card__text">
-                за 100 дней после первых родов похудела на 20 кг.
+          <div class="program-list">
+            <article class="program-card flagship">
+              <img src="assets/home-flagship.png" alt="Метод Усмановой" />
+              <div class="program-card__info">
+                <span class="program-card__badge">ФЛАГМАН</span>
+                <h3>Метод Усмановой</h3>
+                <p>
+                  <strong>Освоите технику и втянетесь в регулярные
+                  тренировки</strong> — без травм и через силу. Первая программа,
+                  с которой начинают все ученицы Кати.
+                </p>
+                <a class="button button--outline" href="https://usmanovafit.gymteam.ru/maysale2026_7">
+                  Подробнее
+                </a>
+              </div>
+            </article>
+
+            <article class="program-card">
+              <img src="assets/home-stroynosti.png" alt="Марафон Стройности" />
+              <div class="program-card__info">
+                <span class="program-card__badge">Марафон</span>
+                <h3>Стройности</h3>
+                <p>
+                  <strong>Первый видимый результат за 21 день</strong> — уходит
+                  первый жир, появляется тонус и лёгкость. Для тех, кто стартует
+                  с нуля.
+                </p>
+                <a class="button button--outline" href="https://usmanovafit.gymteam.ru/maysale2026_7">
+                  Подробнее
+                </a>
+              </div>
+            </article>
+
+            <article class="program-card">
+              <img src="assets/home-upugraya-popa-1.png" alt="Марафон Упругая попа 1.0" />
+              <div class="program-card__info">
+                <span class="program-card__badge">Марафон</span>
+                <h3>Упругая попа 1.0</h3>
+                <p>
+                  <strong>Первый объём и подтянутость ягодиц</strong> — с
+                  собственным весом. Для тех, кто впервые целенаправленно
+                  работает над попой.
+                </p>
+                <a class="button button--outline" href="https://usmanovafit.gymteam.ru/maysale2026_7">
+                  Подробнее
+                </a>
+              </div>
+            </article>
+
+            <article class="program-card">
+              <img src="assets/home-upugraya-popa-2.png" alt="Марафон Упругая попа 2.0" />
+              <div class="program-card__info">
+                <span class="program-card__badge">Марафон</span>
+                <h3>Упругая попа 2.0</h3>
+                <p>
+                  <strong>Плотные, упругие ягодицы</strong> — следующий уровень
+                  после 1.0. С резинкой и утяжелителями, для подготовленных.
+                </p>
+                <a class="button button--outline" href="https://usmanovafit.gymteam.ru/maysale2026_7">
+                  Подробнее
+                </a>
+              </div>
+            </article>
+
+            <article class="program-card">
+              <img src="assets/home-ploskiy-zhivot.png" alt="Марафон Плоский живот" />
+              <div class="program-card__info">
+                <span class="program-card__badge">Марафон</span>
+                <h3>Плоский живот</h3>
+                <p>
+                  <strong>Убрать вываливающийся живот</strong>, который не уходит
+                  даже после похудения. Тренировки на глубокие мышцы пресса,
+                  которые отвечают за плоский живот — а не за «кубики».
+                </p>
+                <a class="button button--outline" href="https://usmanovafit.gymteam.ru/maysale2026_7">
+                  Подробнее
+                </a>
+              </div>
+            </article>
+
+            <article class="program-card">
+              <img src="assets/home-zhyroszhigayushchiy.png" alt="Курс Жиросжигающий" />
+              <div class="program-card__info">
+                <span class="program-card__badge">Курс</span>
+                <h3>Жиросжигающий</h3>
+                <p>
+                  <strong>Сжечь жир и проявить рельеф</strong> — за 6 недель.
+                  Для тех, кто уже тренировался: с гантелями, по схеме
+                  интервальных нагрузок.
+                </p>
+                <a class="button button--outline" href="https://usmanovafit.gymteam.ru/maysale2026_7">
+                  Подробнее
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gym-section">
+        <div class="container gym-section__inner">
+          <div class="section-head">
+            <p class="eyebrow">Тренировки в зале</p>
+            <h2>Готовая программа для мышечного объёма</h2>
+          </div>
+          <article class="gym-card">
+            <div class="gym-card__media">
+              <img src="assets/gym.png" alt="Тренировки в зале" />
+            </div>
+            <div class="gym-card__info">
+              <span class="program-card__badge">Курс</span>
+              <h3>Для зала</h3>
+              <p>
+                Мышцы снова растут — когда дома прогресс уже встал. Готовая
+                программа для зала на мышечный объём.
               </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="contact" id="contact">
-        <div class="container contact__inner">
-          <div class="contact__info">
-            <p class="eyebrow">Не знаете, с чего начать?</p>
-            <h2>Напишите нам и подберём программу под вашу цель и уровень.</h2>
-            <p>Это бесплатно и быстро.</p>
-          </div>
-          <form class="contact-form" id="contactForm" novalidate>
-            <label class="field">
-              <span>Имя</span>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                required
-                placeholder="Введите имя"
-              />
-              <small class="error" id="nameError"></small>
-            </label>
-            <label class="field">
-              <span>Телефон</span>
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                required
-                placeholder="+7 999 000-00-00"
-                pattern="\+7\s\d{3}\s\d{3}-\d{2}-\d{2}"
-              />
-              <small class="error" id="phoneError"></small>
-            </label>
-            <label class="field">
-              <span>Цель</span>
-              <select name="goal" id="goal" required>
-                <option value="">Выберите цель</option>
-                <option value="похудеть">Похудеть</option>
-                <option value="подтянуть тело">Подтянуть тело</option>
-                <option value="восстановиться">
-                  Восстановиться после родов
-                </option>
-              </select>
-              <small class="error" id="goalError"></small>
-            </label>
-            <button type="submit" class="button button--secondary">
-              Отправить заявку
-            </button>
-            <p class="form-success" id="formSuccess" hidden>
-              Спасибо! Ваша заявка отправлена.
-            </p>
-          </form>
+              <a class="button button--primary button--small" href="https://usmanovafit.gymteam.ru/maysale2026_7">
+                Подробнее
+              </a>
+            </div>
+          </article>
         </div>
       </section>
     </main>

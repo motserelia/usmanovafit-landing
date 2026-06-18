@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usmanova Fit</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="hero__content">
+          <div class="hero__text">
+            <p class="eyebrow">Приведите тело в форму</p>
+            <h1>с чемпионкой Катей Усмановой</h1>
+            <p class="hero__subtitle">
+              без диет, голода и запретов, с пользой для здоровья
+            </p>
+            <p class="hero__description">
+              Похудеть, подтянуть попу и живот, набрать форму в зале,
+              восстановиться после родов — тренировки и питание под вашу цель.
+            </p>
+            <div class="hero__actions">
+              <button class="button button--primary" id="chooseProgram">
+                Выбрать программу
+              </button>
+              <span class="hint"
+                >Для корректной работы сайта отключите VPN</span
+              >
+            </div>
+          </div>
+          <div class="hero__image" aria-hidden="true">
+            <div class="hero__photo"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container about__inner">
+          <div class="about__title-block">
+            <p class="eyebrow">Доверьте свое тело чемпионке</p>
+            <h2>фитнес-бикини и тренеру Кате Усмановой</h2>
+            <p>
+              С 2015 года создаёт топовые тренировки для идеальных ягодиц,
+              плоского живота и стройности без жёстких диет.
+            </p>
+          </div>
+          <ul class="about__cards">
+            <li class="card">
+              <div class="card__icon">🥇</div>
+              <p class="card__title">Вице-чемпионка мира</p>
+              <p class="card__text">и чемпионка России по фитнес-бикини.</p>
+            </li>
+            <li class="card">
+              <div class="card__icon">🏋️‍♀️</div>
+              <p class="card__title">Профессиональный фитнес-тренер</p>
+              <p class="card__text">с опытом более 15 лет.</p>
+            </li>
+            <li class="card">
+              <div class="card__icon">👩‍👧‍👦</div>
+              <p class="card__title">Мама 2-х детей</p>
+              <p class="card__text">
+                за 100 дней после первых родов похудела на 20 кг.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container contact__inner">
+          <div class="contact__info">
+            <p class="eyebrow">Не знаете, с чего начать?</p>
+            <h2>Напишите нам и подберём программу под вашу цель и уровень.</h2>
+            <p>Это бесплатно и быстро.</p>
+          </div>
+          <form class="contact-form" id="contactForm" novalidate>
+            <label class="field">
+              <span>Имя</span>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                placeholder="Введите имя"
+              />
+              <small class="error" id="nameError"></small>
+            </label>
+            <label class="field">
+              <span>Телефон</span>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                required
+                placeholder="+7 999 000-00-00"
+                pattern="\+7\s\d{3}\s\d{3}-\d{2}-\d{2}"
+              />
+              <small class="error" id="phoneError"></small>
+            </label>
+            <label class="field">
+              <span>Цель</span>
+              <select name="goal" id="goal" required>
+                <option value="">Выберите цель</option>
+                <option value="похудеть">Похудеть</option>
+                <option value="подтянуть тело">Подтянуть тело</option>
+                <option value="восстановиться">
+                  Восстановиться после родов
+                </option>
+              </select>
+              <small class="error" id="goalError"></small>
+            </label>
+            <button type="submit" class="button button--secondary">
+              Отправить заявку
+            </button>
+            <p class="form-success" id="formSuccess" hidden>
+              Спасибо! Ваша заявка отправлена.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

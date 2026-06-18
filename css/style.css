@@ -89,14 +89,15 @@ p {
 
 .hero__body {
   display: grid;
-  grid-template-columns: 470px 570px;
+  grid-template-columns: 500px 600px;
   align-items: center;
-  gap: 45px;
+  gap: 0;
   padding-left: 220px;
 }
 
 .hero__text {
-  max-width: 470px;
+  max-width: 500px;
+  padding-left: 15px;
 }
 
 .hero__title {
@@ -119,7 +120,7 @@ p {
 
 .hero__description {
   margin-bottom: 30px;
-  max-width: 470px;
+  max-width: 500px;
   color: #000000;
   font-size: 18px;
   line-height: 21.6px;

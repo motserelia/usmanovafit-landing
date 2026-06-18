@@ -404,6 +404,10 @@ p {
   overflow: hidden;
 }
 
+.trust__panel-card {
+  display: contents;
+}
+
 .gc-info-item {
   display: flex;
   align-items: flex-start;
@@ -652,14 +656,12 @@ select {
   }
 
   .trust__inner {
-    padding: 0 30px;
+    padding: 0 16px;
     max-width: 100%;
   }
 
   .trust__title {
-    width: calc(100% + 60px);
-    max-width: none;
-    margin-left: -30px;
+    width: 100%;
     font-size: 24px;
     line-height: 28.8px;
     text-align: center;
@@ -676,6 +678,7 @@ select {
 
   .gc-info-item {
     width: 100%;
+    margin-bottom: 14px;
   }
 
   .gc-slider-item {
@@ -688,9 +691,31 @@ select {
     border-radius: 30px;
   }
 
+  .trust__panel-card {
+    display: block;
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 14px 14px 18px;
+  }
+
+  .gc-info-item:last-of-type {
+    margin-bottom: 12px;
+  }
+
+  .gc-slider-wrapper {
+    gap: 18px;
+    padding-bottom: 0;
+  }
+
+  .gc-slider-text2 {
+    justify-content: center;
+  }
+
   /* ── PROGRAMS ── */
   .programs {
-    padding: 25px 0;
+    padding: 28px 0;
+    margin: 0 -16px;
+    background: #f3f3f3;
   }
 
   .programs__inner {
@@ -715,17 +740,18 @@ select {
 
   .program-card {
     width: 100%;
-    min-height: 220px;
-    padding-bottom: 10px;
+    min-height: 310px;
+    padding-bottom: 0;
     position: relative;
     overflow: hidden;
+    align-items: stretch;
   }
 
   .program-card img {
     position: static;
     flex-shrink: 0;
-    width: 45%;
-    height: auto;
+    width: 49%;
+    height: 100%;
     object-fit: cover;
     object-position: center top;
     max-width: none;
@@ -736,14 +762,53 @@ select {
     position: relative;
     margin-left: 0;
     flex: 1;
-    padding: 12px;
+    min-width: 0;
+    padding: 18px 18px 16px 12px;
     width: auto;
+  }
+
+  .program-card__badge,
+  .program-card__tag {
+    margin-bottom: 10px;
+  }
+
+  .program-card h3 {
+    font-size: 19px;
+    line-height: 31px;
+    margin-bottom: 10px;
+  }
+
+  .program-card p {
+    margin-bottom: 14px;
   }
 
   .program-card__btn {
     width: auto;
-    height: auto;
-    padding: 10px 18px;
+    min-width: 160px;
+    height: 45px;
+    padding: 10px 24px;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 430px) {
+  .trust__inner {
+    padding: 0 14px;
+  }
+
+  .trust__panel-card {
+    padding: 16px 16px 20px;
+  }
+
+  .programs__inner {
+    padding: 0 14px;
+  }
+
+  .program-card {
+    min-height: 326px;
+  }
+
+  .program-card__info {
+    padding-right: 20px;
   }
 }
 
@@ -762,4 +827,3 @@ select {
     max-height: 520px;
   }
 }
-

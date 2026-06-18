@@ -1,10 +1,10 @@
 :root {
   color-scheme: light;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Gilroy', 'Inter', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #16161a;
-  background: #f6eff8;
+  background: #ffffff;
 }
 
 * {
@@ -18,7 +18,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: #f6eff8;
+  background: #ffffff;
 }
 
 button,
@@ -58,17 +58,19 @@ h1,
 h2,
 h3 {
   margin: 0;
-  line-height: 1.05;
 }
 
 h1 {
-  font-size: clamp(3rem, 5vw, 5.2rem);
+  font-size: 36px;
+  line-height: 43.2px;
   letter-spacing: .04em;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: 32px;
+  line-height: 38.4px;
 }
 
 h3 {
@@ -80,41 +82,86 @@ p {
 }
 
 .hero {
-  background: linear-gradient(180deg, #ffffff 0%, #fff5fb 75%, #f8f3f8 100%);
+  background: #ffffff;
   border-radius: 34px;
   padding: 42px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 20px 60px rgba(110, 33, 90, 0.07);
 }
 
 .hero__body {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 470px 570px;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 .hero__text {
-  max-width: 640px;
+  max-width: 470px;
+}
+
+.hero__title {
+  margin: 0 0 30px;
+  font-size: 36px;
+  line-height: 43.2px;
+  color: #f66297;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: uppercase;
 }
 
 .hero__subtitle {
-  margin: 0 0 18px;
-  font-size: 1.05rem;
-  line-height: 1.5;
-  color: #ff4fa3;
-  font-weight: 700;
+  margin: 0 0 20px;
+  font-size: 26px;
+  line-height: 31.2px;
+  color: #f66297;
+  font-weight: 500;
 }
 
 .hero__description {
   margin-bottom: 30px;
-  max-width: 560px;
-  color: #36363c;
-  font-size: 1rem;
-  line-height: 1.85;
+  max-width: 470px;
+  color: #000000;
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 500;
 }
 
 .hero__actions {
-  display: grid;
-  gap: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.hero__actions .button--primary {
+  width: 300px;
+  height: 85px;
+  min-height: 85px;
+  padding: 30px 40px;
+  font-size: 18px;
+  line-height: 25.2px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #f66297;
+  box-shadow: 0 20px 40px rgba(246, 98, 151, 0.18);
+}
+
+.hero__card {
+  width: 570px;
+  min-height: 663px;
+  border-radius: 44px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(110, 33, 90, 0.12);
+  position: relative;
+}
+
+.hero__card img {
+  width: 570px;
+  height: 663px;
+  object-fit: cover;
 }
 
 .hero__visual {
@@ -122,26 +169,33 @@ p {
   justify-items: center;
 }
 
-.hero__card {
-  width: min(560px, 100%);
-  border-radius: 44px;
-  overflow: hidden;
-  box-shadow: 0 38px 90px rgba(110, 33, 90, .18);
-  position: relative;
-}
-
-.hero__card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .hero__gradient {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 80% 18%, rgba(255, 79, 163, 0.26), transparent 20%),
+  background: radial-gradient(circle at 80% 18%, rgba(255, 79, 163, 0.18), transparent 22%),
     linear-gradient(180deg, rgba(255,255,255,0) 36%, rgba(255,255,255,0.24) 100%);
   pointer-events: none;
+}
+
+.programs {
+  padding: 60px 0;
+}
+
+.programs__inner {
+  max-width: 570px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.programs__title {
+  font-size: 32px;
+  line-height: 38.4px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  margin: 0 0 20px;
+  width: 570px;
+  max-width: 100%;
 }
 
 .section-head {
@@ -152,58 +206,109 @@ p {
 }
 
 .program-list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 570px;
+  max-width: 100%;
 }
 
-.program-card,
-.gym-card {
+.program-card {
+  position: relative;
   background: #ffffff;
-  border-radius: 32px;
+  border-radius: 30px;
   overflow: hidden;
-  box-shadow: 0 22px 60px rgba(136, 37, 104, .1);
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  min-height: 260px;
+  padding-bottom: 15px;
+  width: 570px;
+  max-width: 100%;
 }
 
-.program-card img,
-.gym-card__media img {
-  width: 100%;
+.program-card.flagship {
+  border: 2px solid #f66297;
+}
+
+.program-card img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  max-width: none;
   display: block;
 }
 
-.program-card__info,
-.gym-card__info {
-  padding: 28px;
-  display: grid;
-  gap: 18px;
+.program-card__info {
+  position: relative;
+  margin-left: 50%;
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.program-card__badge,
-.gym-card__info .program-card__badge {
+.program-card__badge {
   display: inline-flex;
-  padding: 11px 18px;
-  border-radius: 999px;
-  font-size: .85rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  background: rgba(255, 79, 163, .12);
-  color: #ff4fa3;
+  padding: 6px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(246, 98, 151, 0.19);
+  color: #f66297;
   width: fit-content;
+  margin-bottom: 10px;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
-.program-card h3,
-.gym-card h3 {
-  color: #17171b;
+.program-card__tag {
+  color: #f66297;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: block;
 }
 
-.program-card p,
-.gym-card__info p {
-  color: #4a4a51;
-  font-size: 1rem;
-  line-height: 1.75;
+.program-card h3 {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.program-card p {
+  color: #555555;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.program-card p strong {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+}
+
+.program-card__btn {
+  display: inline-block;
+  background: #f66297;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 100px;
+  text-decoration: none;
+  width: fit-content;
+  line-height: 22.857px;
+  height: 45px;
+  box-sizing: border-box;
 }
 
 .button {
@@ -258,6 +363,140 @@ p {
 .gym-card {
   grid-template-columns: 1fr 1.1fr;
   min-height: 320px;
+}
+
+.trust {
+  background: #f3f3f3;
+  padding: 60px 0;
+}
+
+.trust__inner {
+  max-width: 570px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.trust__title {
+  font-size: 28px;
+  line-height: 33.6px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0 20px;
+  text-align: center;
+  width: 570px;
+  max-width: 100%;
+}
+
+.trust__accent {
+  color: #f66297;
+}
+
+.trust__description {
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 500;
+  text-align: center;
+  width: 570px;
+  max-width: 100%;
+}
+
+.gc-slider-block {
+  border-radius: 30px;
+  background: #ffffff;
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  overflow: hidden;
+}
+
+.gc-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 540px;
+  max-width: 100%;
+}
+
+.gc-info-item img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.gc-info-text .accent {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24.8px;
+  color: #000000;
+}
+
+.gc-slider-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.gc-slider-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gc-slider-wrapper::-webkit-scrollbar-thumb {
+  background: #f66297;
+  border-radius: 3px;
+}
+
+.gc-slider-item {
+  flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
+}
+
+.gc-slider-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 30px;
+  display: inline;
+}
+
+.gc-slider-text2 {
+  font-size: 12px;
+  color: #f66297;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.arrow-icon {
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 960px) {
+  .trust__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .trust__content,
+  .trust__panel {
+    padding: 24px;
+  }
+  .gc-slider-item {
+    width: 200px;
+  }
 }
 
 .gym-card__media {

@@ -1,5 +1,9 @@
-const chooseProgramButton = document.getElementById('chooseProgram');
+const chooseProgramButtons = document.querySelectorAll(
+  "[data-scroll-to-programs]",
+);
 
-chooseProgramButton?.addEventListener('click', () => {
-  window.location.href = '#programs';
+chooseProgramButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    window.location.href = "#programs";
+  });
 });
